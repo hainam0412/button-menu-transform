@@ -11,15 +11,18 @@ button.addEventListener('click', () =>{
  button.style.transform = 'rotate(180deg)';
 
  button.addEventListener('transitionend', () =>{
+
    button.innerHTML = `<i class="fas fa-times"></i>`;
+   isShow = true;
  })
- isShow = true;
+ 
   }else{
      button.style.transform = 'rotate(-180deg)';
-     isShow = false;
+     
 
      button.addEventListener('transitionend', () =>{
    button.innerHTML = `<i class="fas fa-bars"></i>`;
+   isShow = false;
  })
   }
  
