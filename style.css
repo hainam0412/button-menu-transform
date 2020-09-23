@@ -3,9 +3,11 @@ h1, h2 {
 }
 
 button{
-  outline:none;
-  background:none;
-  border:none;
+  
   cursor:pointer;
   transition: .5s;
+}
+
+.quiz{
+  margin-bottom:10px;
 }

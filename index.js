@@ -2,28 +2,37 @@
 import './style.css';
 
 // Write Javascript code!
-const button = document.getElementById('button');
+const quiz = document.querySelector('.quiz');
+const CnArr = [];
+const TtArr = [];
+const TdArr = [];
+const StArr = [];
 
-let isShow =false;
+const buttons = quiz.querySelectorAll('button');
 
-button.addEventListener('click', () =>{
-  if(isShow ===false){
- button.style.transform = 'rotate(180deg)';
+for( let b of buttons){
+  b.addEventListener('click', () =>{
+    const dataCn = b.getAttribute('data-cn');
+    const dataTt = b.getAttribute('data-tt');
+    const dataTd = b.getAttribute('data-td');
+    const dataSt = b.getAttribute('data-st');
 
- button.addEventListener('transitionend', () =>{
+    CnArr.push(dataCn);
+    TtArr.push(dataTt);
+    TdArr.push(dataTd);
+    StArr.push(dataSt);
 
-   button.innerHTML = `<i class="fas fa-times"></i>`;
-   isShow = true;
- })
- 
-  }else{
-     button.style.transform = 'rotate(-180deg)';
-     
+    console.log(CnArr);
 
-     button.addEventListener('transitionend', () =>{
-   button.innerHTML = `<i class="fas fa-bars"></i>`;
-   isShow = false;
- })
-  }
- 
-})
+    console.log(TtArr);
+
+    console.log(TdArr);
+
+    console.log(StArr);
+  })
+
+  
+}
+
+
+
